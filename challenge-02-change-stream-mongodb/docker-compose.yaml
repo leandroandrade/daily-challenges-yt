@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  mongodb:
+    image: mongo:4.2
+    container_name: mongodb
+    hostname: mongodb
+    expose:
+      - 27017
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_REPLICA_SET_NAME: rs0
+    healthcheck:
+      test: test $$(echo "rs.initiate().ok || rs.slaveOk().ok || rs.status().ok" | mongo --quiet) -eq 1
+      interval: 10s
+      start_period: 30s
+    entrypoint: [ "/usr/bin/mongod", "--replSet", "rs0", "--bind_ip_all" ]
+    networks:
+      - mongors-network
+
+networks:
+  mongors-network:
+    driver: bridge

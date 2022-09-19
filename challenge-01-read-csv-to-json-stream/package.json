@@ -1,0 +1,21 @@
+{
+  "name": "challenge-01-read-csv-to-json-stream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generate-csv.js",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "climem": "^1.0.3",
+    "csvtojson": "^2.0.10",
+    "fast-json-stringify": "^5.1.0",
+    "undici": "^5.10.0"
+  },
+  "devDependencies": {
+    "tap": "^16.3.0"
+  }
+}

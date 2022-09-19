@@ -1,0 +1,16 @@
+{
+  "name": "challenge-2-change-stream-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^7.5.0",
+    "mongodb": "^4.9.1"
+  }
+}
